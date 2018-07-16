@@ -23,9 +23,7 @@ class AutoClickView(BrowserView):
         return self.template()
 
     def autoClick(self, web_site_url):
-        url = "http://www.mingtak.com.tw/"
-        if web_site_url:
-            url = web_site_url
+        url = web_site_url
         try:
             driver = webdriver.Chrome()
             driver.get(url)
