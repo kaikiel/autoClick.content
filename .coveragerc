@@ -1,0 +1,6 @@
+[report]
+include =
+    src/autoClick/*
+omit =
+    */test*
+    */upgrades/*

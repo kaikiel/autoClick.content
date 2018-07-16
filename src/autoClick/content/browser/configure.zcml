@@ -1,0 +1,30 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="autoClick.content">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="autoClick.content.interfaces.IAutoclickContentLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="autoClick.content"
+      type="plone"
+      directory="static"
+      />
+
+  <browser:page
+      name="autoclick_view"
+      for="*"
+      class=".views.AutoClickView"
+      layer="zope.interface.Interface"
+      permission="zope2.View"
+      />
+
+
+</configure>

@@ -1,0 +1,3 @@
+=================autoClick.content
+=================
+User documentation
